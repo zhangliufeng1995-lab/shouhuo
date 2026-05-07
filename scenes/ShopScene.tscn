@@ -1,0 +1,413 @@
+[gd_scene format=3 uid="uid://ce5845ps3tvf0"]
+
+[ext_resource type="Texture2D" uid="uid://dphty2mdodtae" path="res://scripts/shop/ui/bg_shop_counter.png" id="1_bg"]
+[ext_resource type="Texture2D" uid="uid://dkxwgpaqjxj8h" path="res://scripts/shop/ui/ui_panel_adventurer.png" id="2_panel_adv"]
+[ext_resource type="Texture2D" uid="uid://b6l1x6puq5mws" path="res://scripts/shop/ui/ui_panel_inventory.png" id="3_panel_inv"]
+[ext_resource type="Texture2D" uid="uid://bvbm05qu4237x" path="res://scripts/shop/ui/btn_acquire.png" id="4_btn_acquire"]
+[ext_resource type="Texture2D" uid="uid://co850ra6qg1yb" path="res://scripts/shop/ui/btn_bargain.png" id="5_btn_bargain"]
+[ext_resource type="Texture2D" uid="uid://cl8xi3wi4y3of" path="res://scripts/shop/ui/btn_refuse.png" id="6_btn_refuse"]
+[ext_resource type="Texture2D" uid="uid://dptrll2adke7j" path="res://scripts/shop/ui/btn_put_on_sale.png" id="7_btn_sale"]
+[ext_resource type="Texture2D" uid="uid://b4wuwv0mf5x3v" path="res://scripts/shop/ui/btn_business_log.png" id="8_btn_bizlog"]
+[ext_resource type="Texture2D" uid="uid://b1twv4y7d3kvq" path="res://scripts/shop/ui/btn_sales_record.png" id="9_btn_sale_rec"]
+[ext_resource type="Texture2D" uid="uid://i4wwcaaquqtg" path="res://scripts/shop/ui/btn_ecology_panel.png" id="10_btn_eco"]
+[ext_resource type="Texture2D" uid="uid://bxk872y1brcfi" path="res://scripts/shop/ui/btn_end_day.png" id="11_btn_end"]
+[ext_resource type="Script" uid="uid://cbwi6o0y0lce0" path="res://ShopManager.gd" id="12_script"]
+[ext_resource type="PackedScene" uid="uid://cjd8q7d21lwbm" path="res://scenes/BargainWindow.tscn" id="13_vcuth"]
+[ext_resource type="PackedScene" uid="uid://bo4h4xjkpguli" path="res://scenes/MonsterAttackWindow.tscn" id="14_sgsvv"]
+[ext_resource type="Texture2D" uid="uid://bcola8qvpn1mu" path="res://scripts/shop/ui/ui_top_icons.png" id="15_top"]
+[ext_resource type="Texture2D" uid="uid://d3dcvcp6mfulu" path="res://scripts/shop/ui/Panel_BusinessFunctionBar.png" id="16_funcbar"]
+[ext_resource type="PackedScene" uid="uid://drg7ff6yuhsv" path="res://scenes/ShelfManagerWindow.tscn" id="17_6edof"]
+
+[node name="ShopRoot" type="Node2D" unique_id=1098518206]
+script = ExtResource("12_script")
+
+[node name="ShopBackground" type="TextureRect" parent="." unique_id=1477831274]
+offset_right = 2752.0
+offset_bottom = 1536.0
+texture = ExtResource("1_bg")
+stretch_mode = 2
+
+[node name="UILayer" type="Control" parent="." unique_id=627059676]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2752.0
+offset_bottom = 1536.0
+mouse_filter = 2
+
+[node name="TopBar" type="Control" parent="UILayer" unique_id=1719438455]
+anchors_preset = 0
+offset_right = 2752.0
+offset_bottom = 85.0
+
+[node name="TopIcons" type="TextureRect" parent="UILayer/TopBar" unique_id=1047074437]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 2487.0
+offset_bottom = 163.0
+mouse_filter = 2
+texture = ExtResource("15_top")
+stretch_mode = 2
+
+[node name="Status_Gold" type="Control" parent="UILayer/TopBar" unique_id=1123816307]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 430.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="UILayer/TopBar/Status_Gold" unique_id=602474512]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 38.0
+offset_right = 523.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 0.843, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "12,450"
+
+[node name="Status_Reputation" type="Control" parent="UILayer/TopBar" unique_id=1428942960]
+anchors_preset = 0
+offset_left = 450.0
+offset_top = 20.0
+offset_right = 850.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="UILayer/TopBar/Status_Reputation" unique_id=397233514]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 41.0
+offset_right = 507.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.678, 0.847, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "68"
+
+[node name="Status_Days" type="Control" parent="UILayer/TopBar" unique_id=1478607339]
+anchors_preset = 0
+offset_left = 870.0
+offset_top = 20.0
+offset_right = 1270.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="UILayer/TopBar/Status_Days" unique_id=613021225]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 33.0
+offset_right = 442.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 22
+text = "第23天"
+
+[node name="Btn_UpgradeDecor" type="Button" parent="UILayer/TopBar" unique_id=2031763825]
+layout_mode = 0
+offset_left = 1284.0
+offset_top = 83.0
+offset_right = 1484.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 14
+text = "🎨升级装饰 (300金)"
+
+[node name="Btn_UpgradeCounter" type="Button" parent="UILayer/TopBar" unique_id=1226966970]
+layout_mode = 0
+offset_left = 1676.0
+offset_top = 87.0
+offset_right = 1876.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 14
+text = "🛒升级柜台 (400金)"
+
+[node name="Btn_UpgradeVault" type="Button" parent="UILayer/TopBar" unique_id=152703193]
+layout_mode = 0
+offset_left = 2103.0
+offset_top = 91.0
+offset_right = 2303.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 14
+text = "🔒升级保险箱 (500金)"
+
+[node name="Label_Decor" type="Label" parent="UILayer/TopBar" unique_id=779996906]
+layout_mode = 0
+offset_left = 1323.0
+offset_top = 60.0
+offset_right = 1523.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.85, 0.85, 0.7, 1)
+theme_override_font_sizes/font_size = 15
+text = "🎨装饰 Lv.1"
+
+[node name="Label_Counter" type="Label" parent="UILayer/TopBar" unique_id=875283433]
+layout_mode = 0
+offset_left = 1712.0
+offset_top = 61.0
+offset_right = 1912.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.85, 0.85, 0.7, 1)
+theme_override_font_sizes/font_size = 15
+text = "🛒柜台 Lv.1"
+
+[node name="Label_Safe" type="Label" parent="UILayer/TopBar" unique_id=485467011]
+layout_mode = 0
+offset_left = 2132.0
+offset_top = 67.0
+offset_right = 2332.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.85, 0.85, 0.7, 1)
+theme_override_font_sizes/font_size = 15
+text = "🔒保险箱 Lv.1"
+
+[node name="Panel_Adventurer" type="NinePatchRect" parent="UILayer" unique_id=195074653]
+layout_mode = 0
+offset_left = 2202.0
+offset_top = 169.0
+offset_right = 2744.0
+offset_bottom = 680.0
+texture = ExtResource("2_panel_adv")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Title" type="Label" parent="UILayer/Panel_Adventurer" unique_id=986522335]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 26.0
+offset_right = 323.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 18
+text = "冒险者信息"
+
+[node name="Avatar" type="TextureRect" parent="UILayer/Panel_Adventurer" unique_id=123809947]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 62.0
+offset_right = 220.0
+offset_bottom = 253.0
+
+[node name="Label_Name" type="Label" parent="UILayer/Panel_Adventurer" unique_id=46887791]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 85.0
+offset_right = 520.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 18
+text = "名称："
+
+[node name="Label_Class" type="Label" parent="UILayer/Panel_Adventurer" unique_id=619732691]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 113.0
+offset_right = 520.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 18
+text = "职业："
+
+[node name="Label_Level" type="Label" parent="UILayer/Panel_Adventurer" unique_id=1578464571]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 139.0
+offset_right = 519.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 18
+text = "等级："
+
+[node name="Label_Rep" type="Label" parent="UILayer/Panel_Adventurer" unique_id=1435521369]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 167.0
+offset_right = 519.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 18
+text = "信誉："
+
+[node name="Label_Relation" type="Label" parent="UILayer/Panel_Adventurer" unique_id=2090166763]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 199.0
+offset_right = 518.0
+offset_bottom = 224.0
+theme_override_font_sizes/font_size = 18
+text = "友善 :"
+
+[node name="ItemIcon" type="TextureRect" parent="UILayer/Panel_Adventurer" unique_id=1392174342]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 306.0
+offset_right = 129.0
+offset_bottom = 416.0
+
+[node name="Label_ItemName" type="Label" parent="UILayer/Panel_Adventurer" unique_id=2105665422]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 266.0
+offset_right = 514.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 18
+text = "物品名称 :"
+
+[node name="Label_ItemDesc" type="Label" parent="UILayer/Panel_Adventurer" unique_id=1576608387]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 299.0
+offset_right = 515.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 18
+text = "物品描述 :"
+
+[node name="Label_Price" type="Label" parent="UILayer/Panel_Adventurer" unique_id=2109349031]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 338.0
+offset_right = 517.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 18
+text = "建议价 : "
+
+[node name="Btn_Acquire" type="Button" parent="UILayer/Panel_Adventurer" unique_id=1359087234]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 428.0
+offset_right = 184.0
+offset_bottom = 497.0
+icon = ExtResource("4_btn_acquire")
+flat = true
+
+[node name="Btn_Bargain" type="Button" parent="UILayer/Panel_Adventurer" unique_id=130559962]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 423.0
+offset_right = 378.0
+offset_bottom = 497.0
+icon = ExtResource("5_btn_bargain")
+flat = true
+
+[node name="Btn_Refuse" type="Button" parent="UILayer/Panel_Adventurer" unique_id=1109685739]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 425.0
+offset_right = 550.0
+offset_bottom = 499.0
+icon = ExtResource("6_btn_refuse")
+flat = true
+
+[node name="Panel_Inventory" type="NinePatchRect" parent="UILayer" unique_id=772959542]
+layout_mode = 0
+offset_left = 2202.0
+offset_top = 698.0
+offset_right = 2751.0
+offset_bottom = 1263.0
+texture = ExtResource("3_panel_inv")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Title" type="Label" parent="UILayer/Panel_Inventory" unique_id=1952251996]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 28.0
+offset_right = 311.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 18
+text = "库存"
+
+[node name="Label_PriceTag" type="Label" parent="UILayer/Panel_Inventory" unique_id=1386744707]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 98.0
+offset_right = 100.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 18
+text = "售价"
+
+[node name="Input_SellPrice" type="LineEdit" parent="UILayer/Panel_Inventory" unique_id=232979673]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 83.0
+offset_right = 329.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 18
+placeholder_text = "输入售价"
+
+[node name="Btn_PutOnSale" type="Button" parent="UILayer/Panel_Inventory" unique_id=1292263700]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 75.0
+offset_right = 521.0
+offset_bottom = 142.0
+icon = ExtResource("7_btn_sale")
+flat = true
+
+[node name="Scroll_Inventory" type="ScrollContainer" parent="UILayer/Panel_Inventory" unique_id=1171847392]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 200.0
+offset_right = 553.0
+offset_bottom = 531.0
+
+[node name="InventoryList" type="VBoxContainer" parent="UILayer/Panel_Inventory/Scroll_Inventory" unique_id=475088922]
+layout_mode = 2
+
+[node name="Panel_BusinessFunctionBar" type="NinePatchRect" parent="UILayer" unique_id=258048931]
+layout_mode = 0
+offset_left = 2201.0
+offset_top = 1272.0
+offset_right = 2750.0
+offset_bottom = 1500.0
+texture = ExtResource("16_funcbar")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Btn_BusinessLog" type="Button" parent="UILayer/Panel_BusinessFunctionBar" unique_id=468472388]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 145.0
+offset_bottom = 90.0
+icon = ExtResource("8_btn_bizlog")
+flat = true
+
+[node name="Btn_SalesRecord" type="Button" parent="UILayer/Panel_BusinessFunctionBar" unique_id=7664722]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 30.0
+offset_right = 270.0
+offset_bottom = 90.0
+icon = ExtResource("9_btn_sale_rec")
+flat = true
+
+[node name="Btn_EcologyPanel" type="Button" parent="UILayer/Panel_BusinessFunctionBar" unique_id=191540542]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 30.0
+offset_right = 395.0
+offset_bottom = 90.0
+icon = ExtResource("10_btn_eco")
+flat = true
+
+[node name="Btn_EndDay" type="Button" parent="UILayer/Panel_BusinessFunctionBar" unique_id=1559644074]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 30.0
+offset_right = 520.0
+offset_bottom = 90.0
+icon = ExtResource("11_btn_end")
+flat = true
+
+[node name="Btn_ShelfManager" type="Button" parent="UILayer/Panel_BusinessFunctionBar" unique_id=930579816]
+custom_minimum_size = Vector2(94, 50)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 160.0
+offset_right = 20.0
+offset_bottom = 160.0
+text = "📋 货架管理"
+
+[node name="BargainWindow" parent="." unique_id=1759451798 instance=ExtResource("13_vcuth")]
+
+[node name="MonsterAttackWindow" parent="." unique_id=1316886954 instance=ExtResource("14_sgsvv")]
+
+[node name="ShelfManagerWindow" parent="." unique_id=1505585068 instance=ExtResource("17_6edof")]

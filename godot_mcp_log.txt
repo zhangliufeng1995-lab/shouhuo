@@ -1,0 +1,12 @@
+[godot-mcp-server] Starting in PRIMARY mode v0.5.0...
+[2026-05-02T09:24:47.500Z] [GodotBridge] [INFO] WebSocket server listening on port 6505
+[godot-mcp-server] WebSocket server listening on port 6505
+[godot-mcp-server] HTTP bridge listening on port 6506
+[godot-mcp-server] Available tools: 65
+[godot-mcp-server] Waiting for Godot editor connection...
+[godot-mcp-server] MCP server connected and ready
+[godot-mcp-server] Godot connected
+[2026-05-02T09:24:47.659Z] [GodotBridge] [INFO] Godot editor ready (project=H:/game/godot_shouhuo/æ”¶è´§/)
+[godot-mcp-server] Direct MCP client disconnected (stdin closed)
+
+H:\game\godot_shouhuo\ÊÕ»õ>

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cjd8q7d21lwbm"]
+
+[node name="BargainWindow" type="CanvasLayer" unique_id=1137620815]
+layer = 2
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=594186239]
+offset_right = 1292.0
+offset_bottom = 1217.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="PopupPanel" type="Panel" parent="." unique_id=234370555]
+offset_left = 346.0
+offset_top = 418.0
+offset_right = 946.0
+offset_bottom = 798.0
+
+[node name="VBox" type="VBoxContainer" parent="PopupPanel" unique_id=355365817]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="InfoLabel" type="Label" parent="PopupPanel/VBox" unique_id=437919591]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "冒险者要价：0 金币"
+horizontal_alignment = 1
+
+[node name="PriceInput" type="LineEdit" parent="PopupPanel/VBox" unique_id=1385329683]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+placeholder_text = "输入出价金额"
+
+[node name="ButtonHB" type="HBoxContainer" parent="PopupPanel/VBox" unique_id=4214464]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ConfirmBtn" type="Button" parent="PopupPanel/VBox/ButtonHB" unique_id=917585444]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "✅ 确认出价"
+
+[node name="CancelBtn" type="Button" parent="PopupPanel/VBox/ButtonHB" unique_id=1637032561]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 18
+text = "❌ 取消"

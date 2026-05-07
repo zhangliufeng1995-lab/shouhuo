@@ -1,0 +1,214 @@
+{
+  "domains": {
+	"glowing_tundra": {
+	  "name": "荧光苔原域",
+	  "species": {
+		"cave_rat": {
+		  "name": "矿鼠",
+		  "population": 180,
+		  "capacity": 200,
+		  "prey": [],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"crystal_rat": { "name": "晶皮鼠", "chance": 0.3, "type": "畸变型", "strength_mod": 0.4, "loot": "晶化鼠皮", "loot_value": 80 },
+			"albino_rat": { "name": "白化盲鼠", "chance": 0.2, "type": "弱化型", "strength_mod": 0.5, "loot": "盲鼠感知腺体", "loot_value": 200 }
+		  }
+		},
+		"hunter_spider": {
+		  "name": "猎手蜘蛛",
+		  "population": 50,
+		  "capacity": 80,
+		  "prey": ["cave_rat", "glow_snail"],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"glow_spider": { "name": "幽光猎手", "chance": 0.4, "type": "强化型", "strength_mod": 1.5, "loot": "幽光毒腺", "loot_value": 120 },
+			"web_tumor_spider": { "name": "丝瘤巨蛛", "chance": 0.1, "type": "畸变型", "strength_mod": 0.2, "loot": "无限丝液瘤", "loot_value": 400 }
+		  }
+		},
+		"cave_terror": {
+		  "name": "穴居恐魔",
+		  "population": 30,
+		  "capacity": 50,
+		  "prey": ["hunter_spider"],
+		  "mutation_chance": 0.005,
+		  "mutations": {
+			"ruminant_terror": { "name": "反刍恐魔", "chance": 0.6, "type": "畸变型", "strength_mod": 0.3, "loot": "恐魔熔炉囊", "loot_value": 350 }
+		  }
+		},
+		"glow_drake": {
+		  "name": "荧光蝠龙",
+		  "population": 12,
+		  "capacity": 24,
+		  "prey": ["cave_terror", "hunter_spider"],
+		  "mutation_chance": 0.02,
+		  "mutations": {
+			"silent_drake": { "name": "无声蝠龙", "chance": 0.5, "type": "弱化型", "strength_mod": 0.4, "loot": "完美无声皮膜", "loot_value": 500 }
+		  }
+		},
+		"glow_snail": {
+		  "name": "荧光蜗牛",
+		  "population": 60,
+		  "capacity": 100,
+		  "prey": [],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"giant_snail": { "name": "巨型荧光蜗牛", "chance": 0.3, "type": "强化型", "strength_mod": 1.8, "loot": "巨型蜗壳", "loot_value": 150 },
+			"shelless_snail": { "name": "裸壳蜗牛", "chance": 0.2, "type": "弱化型", "strength_mod": 0.3, "loot": "浓缩蜗牛粘液", "loot_value": 300 }
+		  }
+		}
+	  }
+	},
+	"shallow_crust": {
+	  "name": "浅层地壳域",
+	  "species": {
+		"bat_swarm": {
+		  "name": "蝙蝠群",
+		  "population": 120,
+		  "capacity": 150,
+		  "prey": [],
+		  "mutation_chance": 0.02,
+		  "mutations": {
+			"vampire_bat": { "name": "吸血蝙蝠", "chance": 0.4, "type": "强化型", "strength_mod": 1.6, "loot": "吸血鬼尖牙", "loot_value": 200 }
+		  }
+		},
+		"slime": {
+		  "name": "史莱姆",
+		  "population": 200,
+		  "capacity": 250,
+		  "prey": [],
+		  "mutation_chance": 0.03,
+		  "mutations": {
+			"golden_slime": { "name": "黄金史莱姆", "chance": 0.1, "type": "畸变型", "strength_mod": 0.2, "loot": "纯金粘液", "loot_value": 800 }
+		  }
+		}
+	  }
+	},
+	"petrified_corridors": {
+	  "name": "石化回廊域",
+	  "species": {
+		"gargoyle": {
+		  "name": "石像鬼",
+		  "population": 40,
+		  "capacity": 60,
+		  "prey": ["bat_swarm"],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"obsidian_gargoyle": { "name": "黑曜石像鬼", "chance": 0.5, "type": "强化型", "strength_mod": 2.0, "loot": "黑曜石翼膜", "loot_value": 300 },
+			"moss_gargoyle": { "name": "苔化石像鬼", "chance": 0.2, "type": "弱化型", "strength_mod": 0.3, "loot": "千年苔藓", "loot_value": 600 }
+		  }
+		},
+		"mimic": {
+		  "name": "拟态宝箱",
+		  "population": 15,
+		  "capacity": 20,
+		  "prey": ["slime"],
+		  "mutation_chance": 0.005,
+		  "mutations": {
+			"golden_mimic": { "name": "黄金宝箱", "chance": 0.2, "type": "畸变型", "strength_mod": 0.1, "loot": "黄金碎片", "loot_value": 1000 },
+			"lazy_mimic": { "name": "惰性宝箱", "chance": 0.3, "type": "弱化型", "strength_mod": 0.2, "loot": "惰性箱肉", "loot_value": 450 }
+		  }
+		},
+		"stone_lizard": {
+		  "name": "石甲蜥蜴",
+		  "population": 35,
+		  "capacity": 50,
+		  "prey": ["slime"],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"crystal_lizard": { "name": "晶甲蜥蜴", "chance": 0.4, "type": "强化型", "strength_mod": 1.4, "loot": "反魔鳞片", "loot_value": 220 }
+		  }
+		}
+	  }
+	},
+	"molten_rift": {
+	  "name": "熔火裂谷域",
+	  "species": {
+		"lava_beetle": {
+		  "name": "熔岩甲虫",
+		  "population": 100,
+		  "capacity": 150,
+		  "prey": [],
+		  "mutation_chance": 0.008,
+		  "mutations": {
+			"cold_flame_beetle": { "name": "寒焰甲虫", "chance": 0.2, "type": "畸变型", "strength_mod": 0.6, "loot": "寒焰腺体", "loot_value": 500 },
+			"steel_beetle": { "name": "钢壳甲虫", "chance": 0.3, "type": "强化型", "strength_mod": 1.3, "loot": "钢化甲壳", "loot_value": 180 }
+		  }
+		},
+		"sulfur_hound": {
+		  "name": "硫磺猎犬",
+		  "population": 40,
+		  "capacity": 60,
+		  "prey": ["lava_beetle"],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"two_head_hound": { "name": "双头猎犬", "chance": 0.3, "type": "强化型", "strength_mod": 1.6, "loot": "双属性毒囊", "loot_value": 320 }
+		  }
+		},
+		"fire_demon": {
+		  "name": "炎魔",
+		  "population": 8,
+		  "capacity": 12,
+		  "prey": ["sulfur_hound"],
+		  "mutation_chance": 0.005,
+		  "mutations": {
+			"ice_fire_demon": { "name": "冰炎魔", "chance": 0.4, "type": "畸变型", "strength_mod": 0.5, "loot": "冰火双重核心", "loot_value": 800 },
+			"ember_demon": { "name": "残烬者", "chance": 0.3, "type": "弱化型", "strength_mod": 0.4, "loot": "残烬精华", "loot_value": 380 }
+		  }
+		}
+	  }
+	},
+	"dragon_graveyard": {
+	  "name": "巨龙墓场域",
+	  "species": {
+		"bone_knight": {
+		  "name": "骸骨骑士",
+		  "population": 15,
+		  "capacity": 25,
+		  "prey": [],
+		  "mutation_chance": 0.005,
+		  "mutations": {
+			"dragon_bone_knight": { "name": "巨龙骸骨骑士", "chance": 0.5, "type": "强化型", "strength_mod": 1.8, "loot": "龙骑士的缰绳", "loot_value": 500 },
+			"headless_knight": { "name": "无头骸骨骑士", "chance": 0.2, "type": "弱化型", "strength_mod": 0.3, "loot": "残留记忆碎片", "loot_value": 600 }
+		  }
+		},
+		"scavenger_bird": {
+		  "name": "食腐鸟",
+		  "population": 30,
+		  "capacity": 40,
+		  "prey": [],
+		  "mutation_chance": 0.01,
+		  "mutations": {
+			"immortal_bird": { "name": "永生食腐鸟", "chance": 0.1, "type": "畸变型", "strength_mod": 0.1, "loot": "永生鸟的羽毛", "loot_value": 900 }
+		  }
+		},
+		"parasite_worm": {
+		  "name": "寄生蠕虫",
+		  "population": 60,
+		  "capacity": 80,
+		  "prey": [],
+		  "mutation_chance": 0.02,
+		  "mutations": {
+			"crystal_worm": { "name": "晶化蠕虫", "chance": 0.3, "type": "畸变型", "strength_mod": 0.4, "loot": "晶化蠕虫的壳", "loot_value": 550 }
+		  }
+		}
+	  }
+	}
+  },
+  "migration_rules": [
+	{ "species": "cave_rat", "from": "glowing_tundra", "to": "shallow_crust", "threshold": 1.3, "rate": 0.4 },
+	{ "species": "hunter_spider", "from": "glowing_tundra", "to": "petrified_corridors", "threshold": 1.2, "rate": 0.3 },
+	{ "species": "cave_terror", "from": "glowing_tundra", "to": "petrified_corridors", "threshold": 1.4, "rate": 0.25 },
+	{ "species": "glow_snail", "from": "glowing_tundra", "to": "shallow_crust", "threshold": 1.5, "rate": 0.3 },
+	{ "species": "glow_drake", "from": "glowing_tundra", "to": "petrified_corridors", "threshold": 1.5, "rate": 0.15 },
+	{ "species": "bat_swarm", "from": "shallow_crust", "to": "glowing_tundra", "threshold": 1.4, "rate": 0.2 },
+	{ "species": "slime", "from": "shallow_crust", "to": "glowing_tundra", "threshold": 1.6, "rate": 0.25 },
+	{ "species": "gargoyle", "from": "petrified_corridors", "to": "glowing_tundra", "threshold": 1.3, "rate": 0.2 },
+	{ "species": "mimic", "from": "petrified_corridors", "to": "shallow_crust", "threshold": 1.5, "rate": 0.1 },
+	{ "species": "stone_lizard", "from": "petrified_corridors", "to": "glowing_tundra", "threshold": 1.4, "rate": 0.2 },
+	{ "species": "lava_beetle", "from": "molten_rift", "to": "petrified_corridors", "threshold": 1.5, "rate": 0.2 },
+	{ "species": "sulfur_hound", "from": "molten_rift", "to": "petrified_corridors", "threshold": 1.4, "rate": 0.15 },
+	{ "species": "fire_demon", "from": "molten_rift", "to": "dragon_graveyard", "threshold": 1.3, "rate": 0.1 },
+	{ "species": "bone_knight", "from": "dragon_graveyard", "to": "molten_rift", "threshold": 1.4, "rate": 0.15 },
+	{ "species": "scavenger_bird", "from": "dragon_graveyard", "to": "petrified_corridors", "threshold": 1.3, "rate": 0.2 }
+  ]
+}

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://drg7ff6yuhsv"]
+
+[ext_resource type="Script" uid="uid://bxqfsu53hj5yi" path="res://scripts/shop/shelf_manager.gd" id="1_ss67o"]
+
+[node name="ShelfManagerWindow" type="CanvasLayer" unique_id=1505585068]
+script = ExtResource("1_ss67o")

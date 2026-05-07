@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bo4h4xjkpguli"]
+
+[node name="MonsterAttackWindow" type="CanvasLayer" unique_id=2039886499]
+layer = 2
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1784741596]
+offset_right = 1292.0
+offset_bottom = 1217.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="PopupPanel" type="Panel" parent="." unique_id=1268920546]
+offset_left = 346.0
+offset_top = 418.0
+offset_right = 946.0
+offset_bottom = 798.0
+
+[node name="VBox" type="VBoxContainer" parent="PopupPanel" unique_id=859265425]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="InfoLabel" type="RichTextLabel" parent="PopupPanel/VBox" unique_id=334938591]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 0.8, 1)
+theme_override_font_sizes/normal_font_size = 22
+text = "⚠ 一只 怪物 正在袭击你的商店！"
+fit_content = true
+
+[node name="Spacer" type="Label" parent="PopupPanel/VBox" unique_id=1317522119]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="ButtonHB" type="HBoxContainer" parent="PopupPanel/VBox" unique_id=16856643]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="OptionBtn1" type="Button" parent="PopupPanel/VBox/ButtonHB" unique_id=775925997]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "🛡 请守卫（消耗金币）"
+
+[node name="OptionBtn2" type="Button" parent="PopupPanel/VBox/ButtonHB" unique_id=514967140]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "⚔ 亲自应对"

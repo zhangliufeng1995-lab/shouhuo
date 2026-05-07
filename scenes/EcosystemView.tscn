@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://0jc7jo50d2at"]
+
+[ext_resource type="Script" uid="uid://gul3ulcakr8x" path="res://scripts/EcosystemView.gd" id="1_dwtll"]
+
+[node name="EcosystemView" type="Node2D" unique_id=1485933890]
+script = ExtResource("1_dwtll")
