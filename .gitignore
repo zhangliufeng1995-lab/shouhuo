@@ -1,3 +1,22 @@
-# Godot 4+ specific ignores
+# Godot 自动生成文件
 .godot/
-/android/
+*.import
+*.uid
+*.translation
+*.so
+*.dll
+*.dylib
+
+# 临时文件
+*.tmp
+*.log
+*.bak
+.DS_Store
+Thumbs.db
+
+# 导出的游戏文件
+export/
+build/
+*.exe
+*.apk
+*.ipa
